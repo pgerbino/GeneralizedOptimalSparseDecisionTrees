@@ -46,8 +46,7 @@ struct MembershipKeyHashCompare {
 typedef tbb::concurrent_priority_queue< message_type *, PriorityKeyComparator, 
     tbb::scalable_allocator< message_type * > > queue_type;
 
-typedef tbb::concurrent_hash_map< message_type *, bool, MembershipKeyHashCompare, 
-    tbb::scalable_allocator<std::pair<message_type *, bool>>> membership_table_type;
+typedef tbb::concurrent_hash_map< message_type *, bool, MembershipKeyHashCompare > membership_table_type;
 
 class Queue {
 public:
